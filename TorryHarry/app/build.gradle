@@ -33,6 +33,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding{
+        enabled = true
+    }
 }
 
 dependencies {
@@ -53,4 +56,10 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     /*Note : For Glide image loader library*/
     implementation 'com.github.bumptech.glide:glide:4.7.1'
+    /*Note : ViewModel and  LiveData*/
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    /*Note : New Material design*/
+    implementation 'com.google.android.material:material:1.1.0-alpha07'
 }

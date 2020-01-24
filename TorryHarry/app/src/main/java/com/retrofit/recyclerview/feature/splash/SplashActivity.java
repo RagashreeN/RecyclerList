@@ -10,7 +10,9 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import com.retrofit.recyclerview.R;
+import com.retrofit.recyclerview.feature.NewConcepts.NewConceptActivity;
 import com.retrofit.recyclerview.feature.home.HomeActivity;
+import com.retrofit.recyclerview.feature.service.ServiceHome;
 
 /*Note : SplashActivity for the screen screen display and asking for the runtime location permission*/
 public class SplashActivity extends AppCompatActivity {
@@ -23,25 +25,25 @@ public class SplashActivity extends AppCompatActivity {
         /*Note :  Setting the layout into the screen*/
         setContentView(R.layout.splash_main);
         /*Note : Checking for the Location permission is available or not*/
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            /*Note : Asking the runtime ACCESS_FINE_LOCATION permission for location*/
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
-                    111);
-        } else {
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+//                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            /*Note : Asking the runtime ACCESS_FINE_LOCATION permission for location*/
+//            ActivityCompat.requestPermissions(this,
+//                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+//                    111);
+//        } else {
             /*Note : If already permimssion available then it will move on to the */
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), NewConceptActivity.class);
                     startActivity(intent);
                     finish();
                 }
             }, 2000);
 
-        }
+       // }
     }
 
     @Override
@@ -54,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), ServiceHome.class);
                         startActivity(intent);
                         finish();
                     }
