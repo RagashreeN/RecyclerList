@@ -6,18 +6,17 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission. ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+<!--    android:name=".common.utils.MainApplication"-->
     <application
-        android:name=".common.utils.MainApplication"
+
         android:allowBackup="true"
         android:icon="@drawable/restaurant"
         android:label="Restaurants"
         android:roundIcon="@drawable/restaurant"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feature.home.HomeActivity">
 
-        </activity>
-        <activity android:name=".feature.splash.SplashActivity"
+        <activity android:name=".ui.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,11 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".feature.service.ServiceHome">
 
-        </activity>
-        <service android:name=".feature.service.ServiceMainClass"/>
-        <activity android:name=".feature.NewConcepts.NewConceptActivity"/>
     </application>
 
 </manifest>
