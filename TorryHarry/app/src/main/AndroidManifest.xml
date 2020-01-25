@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 <!--    android:name=".common.utils.MainApplication"-->
     <application
-
+        android:name=".MVVMApplication"
         android:allowBackup="true"
         android:icon="@drawable/restaurant"
         android:label="Restaurants"
